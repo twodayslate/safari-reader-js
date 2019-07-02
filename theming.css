@@ -1,0 +1,226 @@
+body.white {
+    --body-font-color: rgb(27, 27, 27);
+    --horizontal-line-color: rgb(220, 220, 220);
+    --paper-shadow-color: rgba(0, 0, 0, 0.2);
+}
+body.sepia {
+    --body-font-color: rgb(79, 50, 28);
+    --horizontal-line-color: rgb(230, 218, 201);
+    --paper-shadow-color: rgba(0, 0, 0, 0.2);
+}
+body.gray {
+    --body-font-color: rgba(255, 255, 255, 0.78);
+    --horizontal-line-color: rgb(111, 111, 111);
+}
+body.night {
+    --body-font-color: rgb(176, 176, 176);
+    --horizontal-line-color: rgb(62, 62, 62);
+}
+body.night.oled {
+    --body-font-color: rgb(210, 210, 210);
+    --horizontal-line-color: rgba(210, 210, 210, 0.35);
+}
+body.watch.night.oled {
+    --body-font-color: rgb(174, 180, 191);
+}
+
+html:not(.paper) body.white, body.white #article {
+    background-color: white;
+}
+html:not(.paper) body.sepia, body.sepia #article {
+    background-color: rgb(248, 241, 227);
+}
+html:not(.paper) body.gray, body.gray #article {
+    background-color: rgb(74, 74, 77);
+}
+html:not(.paper) body.night, body.night #article {
+    background-color: rgb(18, 18, 18);
+}
+html:not(.paper) body.night.oled, body.night.oled #article {
+    background-color: black;
+}
+
+/* OS X Reader draws backdrop background colors outside of web content, so the follow set only applies to iOS. */
+html.paper body.ios.white {
+    background-color: rgb(230, 230, 230);
+}
+html.paper body.ios.sepia {
+    background-color: rgb(224, 216, 200);
+}
+html.paper body.ios.gray {
+    background-color: rgb(50, 50, 51);
+}
+html.paper body.ios.night {
+    background-color: black;
+}
+
+body.watch.night .metadata * {
+    color: rgb(214, 217, 223) !important;
+}
+
+html.paper body.white #article, html.paper body.sepia #article {
+    box-shadow: 0px 6px 12px 3px var(--paper-shadow-color);
+}
+html.paper body.gray #article {
+    box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.24);
+}
+html.paper body.night #article {
+    outline: 1px solid #272727;
+}
+
+body.watch.night.oled :matches(h1, h2, h3, h4, h5, h6) {
+    color: white;
+}
+
+body.sepia #article :matches(.leading-image, figure, .auxiliary, .pullquote) {
+    color: rgba(79, 50, 28, 0.9);
+}
+body.gray #article :matches(.leading-image, figure, .auxiliary, .pullquote) {
+    color: rgba(255, 255, 255, 0.7);
+}
+body.night #article :matches(.leading-image, figure, .auxiliary, .pullquote) {
+    color: rgba(255, 255, 255, 0.67);
+}
+body.night.oled #article :matches(.leading-image, figure, .auxiliary, .pullquote) {
+    color: rgba(210, 210, 210, 0.9);
+}
+
+body.sepia #article a[href] {
+    color: rgb(209, 150, 0);
+}
+body.gray #article a[href], body.night #article a[href] {
+    color: rgb(90, 200, 250);
+}
+body.watch.night.oled #article a[href] {
+    color: rgb(32, 148, 250);
+}
+
+body #article :matches(.page, .metadata a[href]) {
+    color: var(--body-font-color);
+}
+body #article .page {
+    border-top-color: var(--horizontal-line-color);
+}
+body #article hr {
+    background: var(--horizontal-line-color);
+}
+
+body.sepia .subhead {
+    color: rgba(79, 50, 28, 0.72);
+}
+body.gray .subhead {
+    color: rgba(255, 255, 255, 0.65);
+}
+body.night .subhead {
+    color: rgba(185, 185, 185, 0.9);
+}
+body.night.oled .subhead {
+    color: rgba(210, 210, 210, 0.85);
+}
+
+body.sepia :matches(#article .page-number, #incoming-page-corner) {
+    color: rgba(63, 41, 23, 0.5);
+}
+body.gray :matches(#article .page-number, #incoming-page-corner) {
+    color: rgba(255, 255, 255, 0.45);
+}
+body.night :matches(#article .page-number, #incoming-page-corner) {
+    color: rgba(255, 255, 255, 0.55);
+}
+body.night.oled :matches(#article .page-number, #incoming-page-corner) {
+    color: rgba(210, 210, 210, 0.8);
+}
+
+body.sepia #article blockquote, body.sepia #article q {
+    color: rgb(140, 112, 79);
+}
+body.sepia #article blockquote:not(.simple):not(.pullquote) {
+    border-left-color: rgba(154, 128, 92, 0.1);
+}
+body.gray #article blockquote, body.gray #article q {
+    color: rgba(255, 255, 255, 0.6);
+}
+body.gray #article blockquote:not(.simple):not(.pullquote) {
+    border-left-color: rgba(255, 255, 255, 0.15);
+}
+body.night #article blockquote, body.night #article q {
+    color: rgba(255, 255, 255, 0.6);
+}
+body.night #article blockquote:not(.simple):not(.pullquote) {
+    border-left-color: rgba(255, 255, 255, 0.15);
+}
+body.night.oled #article blockquote, body.night.oled #article q {
+    color: rgba(210, 210, 210, 0.85);
+}
+body.night.oled #article blockquote:not(.simple):not(.pullquote) {
+    border-left-color: rgba(210, 210, 210, 0.2);
+}
+body.watch.night #article blockquote, body.watch.night #article q {
+    color: var(--body-font-color);
+}
+body.watch.night #article blockquote:not(.simple):not(.pullquote) {
+    border-left-color: rgb(51, 51, 51);
+}
+
+body.sepia table :matches(td, th) {
+    border-color: rgb(230, 218, 202);
+}
+body.sepia table th {
+    background-color: rgba(154, 128, 92, 0.06);
+}
+body.gray table :matches(td, th) {
+    border-color: rgb(106, 106, 106);
+}
+body.gray table th {
+    background-color: rgba(255, 255, 255, 0.035);
+}
+body.night table :matches(td, th) {
+    border-color: rgb(50, 50, 50);
+}
+body.night table th {
+    background-color: rgba(255, 255, 255, 0.045);
+}
+body.night.oled table th {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+@media (inverted-colors) {
+    /* If the user has turned on the "smart invert" accessibility preference, they generally prefer
+       their images, such as photos, to not be inverted. Provide this by applying a filter that
+       inverts the colors again (effectively un-inverting). */
+    body:not(.gray):not(.night) #article :matches(img, video) {
+        filter: invert();
+    }
+    body:not(.gray):not(.night) #article picture {
+        filter: none !important;
+    }
+    body.gray, body.night {
+        filter: invert();
+    }
+    body:matches(.gray, .night) #article :matches(img:not(picture > img), picture, video) {
+        filter: none !important;
+    }
+    body:matches(.gray, .night) #article iframe {
+        filter: invert();
+    }
+    html.paper body.white #article, html.paper body.sepia #article {
+        --paper-shadow-color: rgba(255, 255, 255, 0.2);
+    }
+    /* The background color of <body> is not inverted by the filter. Achieve this by manually
+       setting the inverse color. */
+    html:not(.paper) body.gray {
+        background-color: rgb(165, 165, 163) !important;
+    }
+    html.paper body.gray {
+        background-color: rgb(205, 205, 204) !important;
+    }
+    html:not(.paper) body.night {
+        background-color: rgb(237, 237, 237) !important;
+    }
+    html:not(.paper) body.night.oled {
+        background-color: white !important;
+    }
+    html.paper body.night {
+        background-color: white !important;
+    }
+}

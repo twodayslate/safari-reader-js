@@ -1,0 +1,22 @@
+.locale-ja .page {
+    text-align: justify;
+}
+
+.locale-zh-Hans .page {
+    text-align: justify;
+}
+
+.locale-zh-Hant .page {
+    text-align: justify;
+    word-break: break-all;
+}
+
+.locale-hi .title {
+    line-height: 1.65em;
+}
+
+/* See 32728279. */
+.locale-ur.noto :matches(h1, h2, h3, h4, h5, h6) {
+    font-weight: normal;
+    line-height: 2.55em;
+}

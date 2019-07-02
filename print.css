@@ -1,0 +1,22 @@
+@media print {
+    body {
+        margin: 2mm 9mm;
+    }
+
+    .original-url {
+        display: none;
+    }
+
+    #article .float.left {
+        float: left !important;
+    }
+
+    #article .float.right {
+        float: right !important;
+    }
+
+    #article .float {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
